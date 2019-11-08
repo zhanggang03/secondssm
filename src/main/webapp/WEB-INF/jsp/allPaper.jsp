@@ -7,8 +7,8 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<% String appPath = request.getContextPath(); %>
+<%@ page contentType="text/html;charset=UTF-8" language="java" isELIgnored="false"%>
+<% pageContext.setAttribute("path", request.getContextPath());%>
 <html>
 <head>
     <title>Paper列表</title>
@@ -63,7 +63,7 @@
                         <td>${paper.paperDetail}</td>
                         <td>
                             <a href="${path}/paper/toUpdatePaper?id=${paper.paperId}">更改</a> |
-                            <a href="<%=appPath%>/paper/del/${paper.paperId}">删除</a>
+                            <a href="${path}/paper/del/${paper.paperId}">删除</a>
                         </td>
                     </tr>
                 </c:forEach>

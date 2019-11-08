@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-         pageEncoding="UTF-8" %>
+         pageEncoding="UTF-8" isELIgnored="false"%>
 <%
     pageContext.setAttribute("path", request.getContextPath());
 %>
@@ -39,7 +39,7 @@
 </div>
 <br><br>
 <h3>
-    <a href="<%=pageContext.getAttribute("path")%>/paper/allPaper">点击进入管理页面</a>
+    <a href="${path}/paper/allPaper">点击进入管理页面</a>
 </h3>
 </body>
 </html>
